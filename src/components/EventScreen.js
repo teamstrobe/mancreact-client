@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import CommentBox from './CommentBox';
 import CommentList from './CommentList';
 import EventRSVPBtn from './EventRSVPBtn';
