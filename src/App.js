@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import EventScreen from './EventScreen';
+import Spinner from './Spinner';
 
 const App = () => (
   <div>
-    <EventScreen />
+    Yo.
   </div>
 );
 
