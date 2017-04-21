@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import HomeScreen from './HomeScreen';
 const App = () => (
   <div>
     Yo.
-    <br/>
-    <HomeScreen source='App'/>
+    <br />
+    <HomeScreen />
   </div>
 );
 
