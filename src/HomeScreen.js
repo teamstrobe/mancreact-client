@@ -1,10 +1,4 @@
 import React from 'react';
-const HomeScreen = props => (
-  <div className="HomeScreen">
-    This is a HomeScreen.
-    <br />
-
-  </div>
-);
+const HomeScreen = props => <div className="HomeScreen" />;
 
 export default HomeScreen;
