@@ -3,7 +3,6 @@ import PreviousMeetupsList from './PreviousMeetupsList';
 
 const App = () => (
   <div>
-    <PreviousMeetupsList />
   </div>
 );
 
