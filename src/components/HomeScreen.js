@@ -8,10 +8,19 @@ const HomeScreen = () => {
   let upcomingEvent;
   let upcomingDateTime;
   let previousEvents;
+  let options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
   if (events != null) {
     upcomingEvent = events.filter(event => event.status === 'upcoming')[0];
     previousEvents = events.filter(event => event.status === 'past');
-    upcomingDateTime = new Date(upcomingEvent.time).toLocaleDateString();
+    upcomingDateTime = new Date(upcomingEvent.time).toLocaleDateString(
+      'en-GB',
+      options
+    );
   }
   return (
     <div>
