@@ -5,6 +5,7 @@ import queryString from 'query-string';
 import Header from './Header';
 import HomeScreen from './HomeScreen';
 import EventScreen from './EventScreen';
+import UpcomingEventHero from './UpcomingEventHero';
 import Footer from './Footer';
 import Spinner from './Spinner';
 
@@ -14,9 +15,15 @@ const App = () => {
     <div>
       <div className="container">
         <Header me={mockMe} />
-        {(params && params.event)
+        {params && params.event
           ? <EventScreen eventId={params.event} me={mockMe} />
           : <HomeScreen me={mockMe} />}
+        <UpcomingEventHero
+          mainTitle="Main title"
+          subTitle="Sub-title"
+          narrator="by Dan Abramov"
+          comingDate="1st August 2017"
+        />
         <Footer />
         <Spinner />
       </div>
