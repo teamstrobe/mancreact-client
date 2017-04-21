@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import CommentList from './CommentList';
 
 const App = () => (
   <div>
-    <CommentList />
+    Yo.
   </div>
 );
 
