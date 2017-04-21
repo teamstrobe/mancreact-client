@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import CommentBox from './CommentBox';
 
 const App = () => (
   <div>
-    Yo.
+    <CommentBox />
   </div>
 );
 
