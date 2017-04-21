@@ -22,3 +22,5 @@ const UpcomingEventHero = props => {
     </article>
   );
 };
+
+export default UpcomingEventHero;
