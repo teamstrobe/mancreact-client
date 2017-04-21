@@ -13,8 +13,8 @@ const App = () => {
   return (
     <div>
       <div className="container">
-        <Header />
-        {(params && params.event)
+        <Header me={mockMe} />
+        {params && params.event
           ? <EventScreen eventId={params.event} me={mockMe} />
           : <HomeScreen me={mockMe} />}
         <Footer />
