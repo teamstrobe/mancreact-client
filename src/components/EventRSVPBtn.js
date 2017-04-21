@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class EventRSVPBtn extends Component {
-  render() {
-    return (
-      <div className="rsvp-btn-group">
-        <button>
+const EventRSVPBtn = ({ me }) => (
+  <div className="rsvp-btn-group">
+    {me
+      ? <button>
           Say I'm going
         </button>
-      </div>
-    );
-  }
-}
+      : <p className="note">
+          Please log in to RSVP.
+        </p>}
+  </div>
+);
 
 export default EventRSVPBtn;

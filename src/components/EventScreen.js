@@ -4,7 +4,7 @@ import CommentList from './CommentList';
 import EventRSVPBtn from './EventRSVPBtn';
 import { mockEvents } from '../mocks/events';
 
-const EventScreen = ({ eventId }) => {
+const EventScreen = ({ me, eventId }) => {
   const event = mockEvents[eventId];
 
   return (
@@ -14,7 +14,7 @@ const EventScreen = ({ eventId }) => {
         <div className="event-detail__desc">
           <div dangerouslySetInnerHTML={{ __html: event.description }} />
         </div>
-        {'upcoming' === event.status && <EventRSVPBtn />}
+        {'upcoming' === event.status && <EventRSVPBtn me={me} />}
       </div>
       <div className="event-detail__comments">
         <a href="http://meetup.com/blah-blah-blah">
