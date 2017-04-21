@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manchester React</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- Header.js -->
+      <!-- See index.html -->
+      <!-- /Header.js -->
+
+      <!-- EventScreen.js -->
+      <div class="event-detail">
+        <h1 class="event-detail__title">Event name</h1>
+        <div class="event-detail__info">
+          <div class="event-detail__desc">
+            <p>Event description here</p>
+            <p>Another description here</p>
+          </div>
+
+          <!-- EventRSVPBtn.js -->
+          <div class="rsvp-btn-group">
+            <!-- if they're not logged in
+            <p class="note">
+              Please log in to RSVP.
+            </p>
+            --------------------------->
+            <button>
+              Say I'm going
+            </button>
+          </div>
+          <!-- /EventRSVPBtn.js -->
+
+        </div>
+        <div class="event-detail__comments">
+          <a href="http://meetup.com/blah-blah-blah">
+            View on Meetup.com
+          </a>
+
+          <!-- CommentBox.js -->
+          <form>
+            <!-- if they're not logged in
+            <p class="note">
+              Please log in to comment.
+            </p>
+            --------------------------->
+            <div>
+              <textarea class="comment-box" placeholder="Chat about this event"></textarea>
+              <button type="submit">Send</button>
+            </div>
+          </form>
+          <!-- /CommentBox.js -->
+
+          <!-- CommentList.js -->
+          <div>
+            <!-- if they're no comments
+            <p class="note">
+              There are no comments yet. Be the first :)
+            </p>
+            --------------------------->
+            <ul class="comments">
+              <li>
+                This is a comment here
+                <div class="comment-name">
+                  <img
+                    class="avatar"
+                    src="http://placehold.it/40"
+                    alt="John Doe"
+                  />
+                  John Doe
+                </div>
+              </li>
+              <li>
+                Another comment
+                <div class="comment-name">
+                  <img
+                    class="avatar"
+                    src="http://placehold.it/40"
+                    alt="John Doe"
+                  />
+                  John Doe
+                </div>
+              </li>
+            </ul>
+
+          </div>
+          <!-- /CommentList.js -->
+
+        </div>
+      </div>
+      <!-- /EventScreen.js -->
+
+      <!-- Footer.js -->
+      <!-- See index.html -->
+      <!-- /Footer.js -->
+
+    </div>
+  </body>
+</html>

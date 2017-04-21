@@ -1,0 +1,32 @@
+{
+  "name": "mancreact-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "local-storage": "^1.4.2",
+    "lodash": "^4.17.4",
+    "lodash.uniqueid": "^4.0.1",
+    "moment": "^2.18.1",
+    "query-string": "^4.3.2",
+    "querystring": "^0.2.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1"
+  },
+  "devDependencies": {
+    "husky": "^0.13.3",
+    "lint-staged": "^3.4.0",
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --trailing-comma=es5 --write tab-width=2",
+      "git add"
+    ]
+  }
+}
