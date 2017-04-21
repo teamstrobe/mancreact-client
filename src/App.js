@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const App = () => (
   <div>
-    Yo.
+    <Footer />
   </div>
 );
 
