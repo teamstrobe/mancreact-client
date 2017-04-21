@@ -4,7 +4,6 @@ import Spinner from './Spinner';
 const App = () => (
   <div>
     Yo.
-    <Spinner />
   </div>
 );
 
