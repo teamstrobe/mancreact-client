@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import Footer from './Footer';
 
 const App = () => (
   <div>
-    Yo.
+    <Footer />
   </div>
 );
 
