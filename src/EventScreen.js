@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import CommentBox from './CommentBox';
+import CommentList from './CommentList';
+import EventRSVPBtn from './EventRSVPBtn';
 
 const EventScreen = () => (
   <div className="event-detail">
@@ -8,14 +11,14 @@ const EventScreen = () => (
         <p>Event description</p>
         <p>Another description here</p>
       </div>
-      {/* <EventRSVPBtn /> */}
+      <EventRSVPBtn />
     </div>
     <div class="event-detail__comments">
       <a href="http://meetup.com/blah-blah-blah">
         View on Meetup.com
       </a>
-      {/* <CommentBox /> */}
-      {/* <CommentList /> */}
+      <CommentBox />
+      <CommentList />
     </div>
   </div>
 );

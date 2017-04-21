@@ -9,12 +9,12 @@ const PreviousMeetupsList = () => (
 		  <h3>2017</h3>
 		  <ul className="prev-list">
 			<li>
-			  <a href="#">
+			  <a href="?event=1">
 				April
 			  </a>
 			</li>
 			<li>
-			  <a href="#">
+			  <a href="?event=1">
 				May
 			  </a>
 			</li>
@@ -24,12 +24,12 @@ const PreviousMeetupsList = () => (
 		  <h3>2016</h3>
 		  <ul className="prev-list">
 			<li>
-			  <a href="#">
+			  <a href="?event=1">
 				April
 			  </a>
 			</li>
 			<li>
-			  <a href="#">
+			  <a href="?event=1">
 				May
 			  </a>
 			</li>
@@ -41,4 +41,3 @@ const PreviousMeetupsList = () => (
 );
 
 export default PreviousMeetupsList;
-
