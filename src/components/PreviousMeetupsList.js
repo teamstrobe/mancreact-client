@@ -4,7 +4,8 @@ import moment from 'moment';
 
 const PreviousMeetupsList = ({ events }) => {
   const eventsByYear = groupBy(events, event =>
-    moment(event.time).format('YYYY'));
+    moment(event.time).format('YYYY')
+  );
   const sortedYears = Object.keys(eventsByYear).sort().reverse();
   return (
     <section>

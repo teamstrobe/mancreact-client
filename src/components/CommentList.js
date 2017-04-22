@@ -1,34 +1,30 @@
 import React, { Component } from 'react';
+import { mockComments } from '../mocks/comments';
 
 class CommentList extends Component {
   render() {
+    const comments = mockComments;
     return (
       <div>
-        <ul className="comments">
-          <li>
-            This is a comment here
-            <div className="comment-name">
-              <img
-                className="avatar"
-                src="http://placehold.it/40"
-                alt="John Doe"
-              />
-              John Doe
-            </div>
-          </li>
-          <li>
-            Another comment
-            <div className="comment-name">
-              <img
-                className="avatar"
-                src="http://placehold.it/40"
-                alt="John Doe"
-              />
-              John Doe
-            </div>
-          </li>
-        </ul>
-
+        {comments.length > 0
+          ? <ul className="comments">
+              {comments.map(comment => (
+                <li key={comment.id}>
+                  {comment.comment}
+                  <div className="comment-name">
+                    <img
+                      className="avatar"
+                      src={comment.member.photo.thumb_link}
+                      alt={comment.member.name}
+                    />
+                    {comment.member.name}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          : <p className="note">
+              There are no comments yet. Be the first :)
+            </p>}
       </div>
     );
   }

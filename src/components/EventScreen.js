@@ -14,7 +14,7 @@ const EventScreen = ({ me, eventId }) => {
         <div className="event-detail__desc">
           <div dangerouslySetInnerHTML={{ __html: event.description }} />
         </div>
-        {'upcoming' === event.status && <EventRSVPBtn me={me} />}
+        {event.status === 'upcoming' && <EventRSVPBtn me={me} />}
       </div>
       <div className="event-detail__comments">
         <a href="http://meetup.com/blah-blah-blah">
