@@ -7,6 +7,13 @@ Thanks to all contributions from everyone who attend A Day of React. Here's the 
 
 It would be great for this repo to become a learning ground for anyone who attends [Manchester React](www.meetup.com/Manchester-React-User-Group/).
 
-Yes, Jack Franklin's image is currently hardcoded. PR's welcome.
-
 *See also [mancreact-server](https://github.com/teamstrobe/mancreact-server)*
+
+## TODO
+
+[ ] - Remove hardcoded image of Jack Franklin 🙈
+[ ] - GraphQL API?!
+[ ] - CSS in JS exploration
+[ ] - Better design, with responsive improvements, lol
+[ ] - Avoid dangerouslySetInnerHTML, by parsing the HTML into components?
+[ ] - So much other good stuff. PR PR PR PR
