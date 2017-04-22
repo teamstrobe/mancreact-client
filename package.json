@@ -12,7 +12,8 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "serve": "^5.1.4"
   },
   "devDependencies": {
     "husky": "^0.13.3",
@@ -21,7 +22,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "precommit": "lint-staged"
+    "build": "react-scripts build",
+    "precommit": "lint-staged",
+    "now-start": "serve build/"
   },
   "lint-staged": {
     "*.js": [
