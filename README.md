@@ -18,4 +18,5 @@ It would be great for this repo to become a learning ground for anyone who atten
 - [ ] Avoid dangerouslySetInnerHTML, by parsing the HTML into components?
 - [ ] Code splitting
 - [ ] Flow types
+- [ ] JEST. TESTS.
 - [ ] So much other good stuff. PR PR PR PR
