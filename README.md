@@ -12,6 +12,7 @@ It would be great for this repo to become a learning ground for anyone who atten
 ## TODO
 
 - [ ] Remove hardcoded image of Jack Franklin 🙈
+- [ ] Server-side rendering, and general perf improvements!!!
 - [ ] GraphQL API?!
 - [ ] CSS in JS exploration
 - [ ] Better design, with responsive improvements, lol
