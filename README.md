@@ -16,4 +16,6 @@ It would be great for this repo to become a learning ground for anyone who atten
 [ ] - CSS in JS exploration
 [ ] - Better design, with responsive improvements, lol
 [ ] - Avoid dangerouslySetInnerHTML, by parsing the HTML into components?
+[ ] - Code splitting
+[ ] - Flow types
 [ ] - So much other good stuff. PR PR PR PR
