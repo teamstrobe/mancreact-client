@@ -52,7 +52,7 @@ class CommentBox extends Component {
               />
               {loading ? <Spinner /> : <button type="submit">Send</button>}
             </div>
-          : <p class="note">Please log in to comment.</p>}
+          : <p className="note">Please log in to comment.</p>}
       </form>
     );
   }

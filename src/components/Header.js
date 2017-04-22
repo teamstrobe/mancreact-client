@@ -35,7 +35,7 @@ class Header extends Component {
                 <div>
 
                   <img
-                    src="http://mancreact.com/mancreact512.png"
+                    src="/mancreact512.png"
                     alt={group.name}
                     width="100"
                   />
