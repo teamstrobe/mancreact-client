@@ -33,7 +33,7 @@ class App extends Component {
       <div>
         <Header me={mockMe} goToHome={this.goToHome} />
         <div className="container">
-          {(eventId != null)
+          {eventId != null
             ? <EventScreen eventId={eventId} me={mockMe} />
             : <HomeScreen me={mockMe} goToEvent={this.goToEvent} />}
         </div>

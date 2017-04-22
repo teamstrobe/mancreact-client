@@ -4,15 +4,14 @@ import PropTypes from 'prop-types';
 class EventRSVPBtn extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
   }
 
   render() {
-    const me = this.props.me;
+    const user = this.props.user;
     return (
       <div className="rsvp-btn-group">
-        {!me
-          ? <p className="note">
+        {!user
+          ? <p class="note">
               Please log in to RSVP.
             </p>
           : <button>
@@ -24,6 +23,6 @@ class EventRSVPBtn extends Component {
 }
 
 EventRSVPBtn.propTypes = {
-  me: PropTypes.any.isRequired,
+  user: PropTypes.any.isRequired,
 };
 export default EventRSVPBtn;
