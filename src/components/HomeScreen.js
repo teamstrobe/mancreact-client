@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import UpcomingEventHero from './UpcomingEventHero';
+import UpcomingEventHero from './UpcomingEventHero';
 import PreviousMeetupsList from './PreviousMeetupsList';
 import { mockEventsList } from '../mocks/events';
 class HomeScreen extends Component {
@@ -35,18 +35,33 @@ class HomeScreen extends Component {
     }, 1000);
   }
 
+
   render() {
-    // let upcomingEvent;
+    let upcomingEvent;
     let previousEvents;
+    let options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
     if (this.state.events != null) {
-      // upcomingEvent = this.state.events.filter(event => event.status === 'upcoming')[0];
+      upcomingEvent = this.state.events.filter(event => event.status === 'upcoming')[0];
       previousEvents = this.state.events.filter(
         event => event.status === 'past'
+      );
+      upcomingDateTime = new Date(upcomingEvent.time).toLocaleDateString(
+        'en-GB',
+        options
       );
     }
     return (
       <div>
-        {/* <UpcomingEventHero /> */}
+         <UpcomingEventHero
+        mainTitle={upcomingEvent.name}
+        description={upcomingEvent.description}
+        date={upcomingDateTime}
+      />
         <PreviousMeetupsList events={previousEvents} />
       </div>
     );
