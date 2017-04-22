@@ -1,70 +1,53 @@
 import React, { Component } from 'react';
+
+import apiFetch from '../apiFetch';
+import { eventsURI } from '../config/urls';
+
 import UpcomingEventHero from './UpcomingEventHero';
 import PreviousMeetupsList from './PreviousMeetupsList';
-import { mockEventsList } from '../mocks/events';
+import Spinner from './Spinner';
+
 class HomeScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      events: [],
-    };
+  state = {
+    events: null,
+    loading: false,
+  };
+  componentWillMount() {
+    this.fetchData();
   }
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        events: mockEventsList,
-      });
-      this.addAnother();
-    }, 1000);
-  }
-
-  addAnother() {
-    let newEvents = this.state.events;
-    let newfakeEvent = Object.assign({}, newEvents[newEvents.length - 1]);
-    newfakeEvent.id = newEvents.length + 1;
-    newfakeEvent.time = newfakeEvent.time + 1000 * 60 * 60 * 24 * 70;
-    console.log(newfakeEvent.time);
-    newEvents.push(newfakeEvent);
+  async fetchData() {
     this.setState({
-      events: newEvents,
+      loading: true,
     });
-    console.log('Anther');
-    setTimeout(() => {
-      this.addAnother();
-    }, 1000);
+    const events = await this.getEvents();
+    this.setState({
+      events,
+      loading: false,
+    });
   }
-
-
+  async getEvents() {
+    return await apiFetch(eventsURI());
+  }
   render() {
+    const { events, loading } = this.state;
     let upcomingEvent;
     let previousEvents;
-    let options = {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  };
-    if (this.state.events != null) {
-      upcomingEvent = this.state.events.filter(event => event.status === 'upcoming')[0];
-      previousEvents = this.state.events.filter(
-        event => event.status === 'past'
-      );
-      upcomingDateTime = new Date(upcomingEvent.time).toLocaleDateString(
-        'en-GB',
-        options
-      );
+    if (events != null) {
+      upcomingEvent = events.filter(event => event.status === 'upcoming')[0];
+      previousEvents = events.filter(event => event.status === 'past');
     }
     return (
       <div>
-         <UpcomingEventHero
-        mainTitle={upcomingEvent.name}
-        description={upcomingEvent.description}
-        date={upcomingDateTime}
-      />
-        <PreviousMeetupsList events={previousEvents} />
+        {loading
+          ? <Spinner />
+          : <div>
+              {upcomingEvent && <UpcomingEventHero event={upcomingEvent} />}
+              {previousEvents &&
+                <PreviousMeetupsList events={previousEvents} />}
+            </div>}
       </div>
     );
   }
 }
+
 export default HomeScreen;

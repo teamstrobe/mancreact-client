@@ -1,11 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { groupBy } from 'lodash';
 import moment from 'moment';
 
 const PreviousMeetupsList = ({ events }) => {
   const eventsByYear = groupBy(events, event =>
-    moment(event.time).format('YYYY')
-  );
+    moment(event.time).format('YYYY'));
   const sortedYears = Object.keys(eventsByYear).sort().reverse();
   return (
     <section>
@@ -21,9 +21,9 @@ const PreviousMeetupsList = ({ events }) => {
                   const month = moment(event.time).format('MMMM');
                   return (
                     <li key={event.id}>
-                      <a href={`?event=${event.id}`}>
+                      <Link to={`/events/${event.id}`}>
                         {month}
-                      </a>
+                      </Link>
                     </li>
                   );
                 })}
