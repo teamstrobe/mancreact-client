@@ -11,11 +11,11 @@ It would be great for this repo to become a learning ground for anyone who atten
 
 ## TODO
 
-[ ] - Remove hardcoded image of Jack Franklin 🙈
-[ ] - GraphQL API?!
-[ ] - CSS in JS exploration
-[ ] - Better design, with responsive improvements, lol
-[ ] - Avoid dangerouslySetInnerHTML, by parsing the HTML into components?
-[ ] - Code splitting
-[ ] - Flow types
-[ ] - So much other good stuff. PR PR PR PR
+- [ ] Remove hardcoded image of Jack Franklin 🙈
+- [ ] GraphQL API?!
+- [ ] CSS in JS exploration
+- [ ] Better design, with responsive improvements, lol
+- [ ] Avoid dangerouslySetInnerHTML, by parsing the HTML into components?
+- [ ] Code splitting
+- [ ] Flow types
+- [ ] So much other good stuff. PR PR PR PR
