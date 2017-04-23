@@ -2,11 +2,9 @@ import React from 'react';
 
 import { loginURL } from '../config/urls';
 
-const href = loginURL();
-
-const LoginLink = ({ onClick }) => (
+const LoginLink = ({ onClick, pathname }) => (
   <a
-    href={href}
+    href={loginURL(pathname)}
     className="btn"
     onClick={e => {
       if (typeof onClick === 'function') {

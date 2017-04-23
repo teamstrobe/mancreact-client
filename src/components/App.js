@@ -73,7 +73,9 @@ class App extends Component {
     return (
       <Router history={browserHistory}>
         <div>
-          <Header me={this.state.me} onLogoutClick={this.handleLogoutClick} />
+          <Route path="/" render={props => (
+            <Header me={this.state.me} onLogoutClick={this.handleLogoutClick} pathname={props.location.pathname} />
+          )} />
           <div className="container">
             <Route
               path="/events/:eventId"

@@ -25,7 +25,7 @@ class Header extends Component {
   }
   render() {
     const { group } = this.state;
-    const { me, onLoginClick, onLogoutClick } = this.props;
+    const { me, onLoginClick, onLogoutClick, pathname } = this.props;
     return (
       <header className="header">
         <div className="container">
@@ -49,7 +49,7 @@ class Header extends Component {
               </div>}
             <div className="signin">
               {!me
-                ? <LoginLink onClick={onLoginClick} />
+                ? <LoginLink onClick={onLoginClick} pathname={pathname} />
                 : <div>
                     <img
                       className="avatar"
