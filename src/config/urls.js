@@ -11,7 +11,7 @@ export const loginURL = () =>
   })}`;
 
 export const commentsStreamURL = (eventId) =>
-  `ws://stream.meetup.com/2/event_comments?${queryString.stringify({
+  `wss://stream.meetup.com/2/event_comments?${queryString.stringify({
     event_id: eventId,
     access_token: ls('access_token'),
   })}`;
