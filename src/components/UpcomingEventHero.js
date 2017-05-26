@@ -13,7 +13,8 @@ const UpcomingEventHero = ({ event }) => {
     <article
       className="upcoming"
       style={{
-        backgroundImage: 'url(https://pbs.twimg.com/profile_banners/14314572/1462486903/1500x500)',
+        backgroundColor: '#000',
+        // backgroundImage: 'url(https://pbs.twimg.com/profile_banners/14314572/1462486903/1500x500)',
       }}
     >
       <h1>
